@@ -1,0 +1,223 @@
+/*Google Fonts*/
+@import url(https://fonts.googleapis.com/css?family=Assistant);
+/*
+General
+*/
+a{
+    text-decoration: none !important;
+    color: inherit;
+}
+a:hover{
+    text-decoration: none !important;
+    color: inherit;
+}
+*{margin: 0; padding: 0; font-family: sans-serif;}
+footer, main, section, nav {
+	display: block;
+}
+ul{
+    list-style-type: none;
+}
+body{
+    background-color: #f5f5f5;
+    font-family: 'Assistant', sans-serif;
+    font-weight: normal;
+    color: #000000;
+}
+/*
+Buttons
+*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number], table td, input[type=button]{
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 3vmin;
+    padding: 0.5vmin;
+}
+input[type=number]{
+    background-color: #ffffff;
+    border: 0.25vmin solid #000000;
+    border-radius: 0.5vmin;
+    width: 9vmin;
+    text-align: center;
+}
+/*
+Header
+*/
+header{
+    background-color: #111111;
+    height: 10vh;
+    text-align: center;
+}
+.headLim{
+    width: 80vw;
+    text-align: center;
+    margin: 0 auto;
+}
+header h1, header h3{
+    color: #f4f4f4;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 800;
+    font-size: 5vmin;
+    vertical-align: middle;
+    display: inline-block;
+}
+header h3{
+    font-size: 5vmin;
+}
+.flex-even{
+    flex: 1;
+    padding: 0.9vmin;
+    line-height: 8.2vh;
+}
+.calcBtn{
+    font-family: 'Assistant', sans-serif;
+    font-weight: 800 !important;
+    font-size: 3.5vmin !important;
+    color: #000000;
+    background-color: #ffffff;
+    border: 0.3vmin solid #999999;
+    padding-left: 0.5vmin;
+    padding-right: 0.5vmin;
+    vertical-align: middle;
+    display: inline-block;
+}
+.calcBtn:hover{
+    box-shadow: 0.1vmin 0.1vmin 0.1vmin #999999;
+}
+/*
+Main
+*/
+main{
+    background-color: #ffffff;
+}
+/*
+Table Structure & Style
+*/
+#content{
+    background-color: #f4f4f4;
+    padding: 0px;
+    margin: 0px;
+    align-content: middle;
+}
+.myRow{
+    height: 7.5vh;
+    line-height: 7.5vh;
+}
+.type, .amount, .total, .take, .leave{
+    padding: 0.9vmin;
+    border-color: #dedede;
+    border-style: solid;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
+    color: #000000;
+    text-align: right;
+    line-height: 5.7vh;
+}
+.type, .amount{
+    width: 12.5vw;
+}
+.total{
+    width: 19vw;
+}
+.take, .leave{
+    width: 28vw;
+}
+.type{
+    /*top, right, bottom, left*/
+    border-width: 0 0 0.1vmin 0.1vmin;
+}
+.amount{
+    border-width: 0 0 0.1vmin 0.1vmin;
+}
+.total{
+    border-width: 0 0 0.1vmin 0.1vmin;
+}
+.take{
+    border-width: 0 0 0.1vmin 0.1vmin;
+}
+.leave{
+    border-width: 0 0 0.1vmin 0;
+}
+.odd{
+    background-color: #F9F9F9;
+}
+.even{
+    background-color: #F1F1F1;
+}
+/*
+Table
+*/
+.myRow h3, .myRow h4{
+    font-size: 5vmin;
+    font-weight: 800;
+    vertical-align: middle;
+    display: inline-block;
+}
+.myRow h4, .myRow h5, .myRow h6, .myh5, .myh6{
+    font-size: 4vmin;
+    vertical-align: middle;
+    display: inline-block;
+}
+.myRow h6, .myh5, .myh6{
+    font-size: 2.5vmin;
+    vertical-align: bottom;
+}
+.myh5, .myh6{
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+    color: #000000;
+    text-align: right;
+}
+.myh6{
+    font-size: 2.2vmin !important;
+    margin-right: 0.5vmin;
+    margin-bottom: 1.5vmin;
+}
+/*
+Row Input
+*/
+.rowInput{
+    width: 10.7vw !important;
+    height: 4.5vh;
+    vertical-align: middle;
+    display: inline-block;
+}
+/*
+Summary
+*/
+#counted{
+    transition: 0.5s;
+}
+.myFlash{
+    color: #76323E;
+    font-size: 4.5vmin !important;
+    font-weight: 800;
+    transition: 0.5s;
+}
+
+/*
+*
+*
+*
+*/
+.b1{    background-color: #AC848B;  }
+.b2{    background-color: #9F6F77;  }
+.b3{    background-color: #915B64;  }
+.b4{    background-color: #834651;  }
+.b5{    background-color: #76323E;  }
+.b6{    background-color: #6A2D37;  }
+.b7{    background-color: #5E2831;  }
+.b8{    background-color: #52232B;  }
+.b9{    background-color: #461E25;  }
+.b0{    background-color: #3B191F;  }
+.bC{    background-color: #2F1418;  }
+.bPl{    background-color: #666666;  }
+.bMi{    background-color: #444444;  }
+.bMu{    background-color: #2B2B2B;  }
+.bDi{    background-color: #111111;  }

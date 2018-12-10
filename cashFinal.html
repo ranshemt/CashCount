@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ספירת קופה</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        
+        <!--my includes-->
+        <link href="includes/css/style.css" rel="stylesheet">
+        <script src="includes/js/backPack.js"></script>
+        <link rel="shortcut icon" type="image/png" href="includes/images/coins.png"/>
+    </head>
+    <!---->
+    <!---->
+    <body>
+        <!--header-->
+        <header class="container-fluid">
+            <div class="headLim">
+                <div class="d-flex flex-row-reverse align-items-center">
+                    <div class="flex-even">
+                        <h1>סגירת קופה</h1>
+                    </div>
+                    <div class="flex-even">
+                        <h3><input type="number" value= "700" id="GOAL" oninput='setGoal(this)'> :מטרה</h3>
+                    </div>
+                    <div class="flex-even">
+                        <h3><input type="button" value="חישוב" class="calcBtn" onclick="calc()"></h3>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--main-->
+        <main>
+            <!--basic container-->
+            <div class="container-fluid" id="content">
+                <!--12 rows container-->
+                <div class="d-flex flex-column align-items-center">
+                    <!--Head Row-->
+                    <div class="myRow odd d-flex flex-row-reverse">
+                        <div class="type">
+                            <h3>סוג</h3>
+                        </div>
+                        <div class="amount">
+                            <h3>כמות</h3>
+                        </div>
+                        <div class="total">
+                            <h3>בקופה</h3>
+                        </div>
+                        <div class="take">
+                            <h3>להוציא</h3>
+                        </div>
+                        <div class="leave">
+                            <h3>להשאיר</h3>
+                        </div>
+                    </div>
+                    <!--0.1 Row-->
+                    <div class="myRow even d-flex flex-row-reverse">
+                        <div class="type">
+                            <h4>0.1</h4>
+                        </div>
+                        <div class="amount">
+                            <input class="rowInput" type="number" value= "0" id="0.1" oninput='inp(this)'>
+                        </div>
+                        <div class="total">
+                            <h5 id="count0.1"></h5>
+                        </div>
+                        <div class="take">
+                            <div id="take0.1">
+                            </div>
+                        </div>
+                        <div class="leave">
+                            <div id="leave0.1">
+                            </div>
+                        </div>
+                    </div>
+                    <!--0.5 Row-->
+                    <div class="myRow odd d-flex flex-row-reverse">
+                        <div class="type">
+                            <h4>0.5</h4>
+                        </div>
+                        <div class="amount">
+                            <input class="rowInput" type="number" value= "0" id="0.5" oninput='inp(this)'>
+                        </div>
+                        <div class="total">
+                            <h5 id="count0.5"></h5>
+                        </div>
+                        <div class="take">
+                            <div id="take0.5">
+                            </div>
+                        </div>
+                        <div class="leave">
+                            <div id="leave0.5">
+                            </div>
+                        </div>
+                    </div>
+                    <!--1 Row-->
+                    <div class="myRow even d-flex flex-row-reverse">
+                        <div class="type">
+                            <h4>1</h4>
+                        </div>
+                        <div class="amount">
+                            <input class="rowInput" type="number" value= "0" id="1" oninput='inp(this)'>
+                        </div>
+                        <div class="total">
+                            <h5 id="count1"></h5>
+                        </div>
+                        <div class="take">
+                            <div id="take1">
+                            </div>
+                        </div>
+                        <div class="leave">
+                            <div id="leave1">
+                            </div>
+                        </div>
+                    </div>
+                    <!--2 Row-->
+                    <div class="myRow odd d-flex flex-row-reverse">
+                        <div class="type">
+                            <h4>2</h4>
+                        </div>
+                        <div class="amount">
+                            <input class="rowInput" type="number" value= "0" id="2" oninput='inp(this)'>
+                        </div>
+                        <div class="total">
+                            <h5 id="count2"></h5>
+                        </div>
+                        <div class="take">
+                            <div id="take2">
+                            </div>
+                        </div>
+                        <div class="leave">
+                            <div id="leave2">
+                            </div>
+                        </div>
+                    </div>
+                    <!--5 Row-->
+                    <div class="myRow even d-flex flex-row-reverse">
+                        <div class="type">
+                            <h4>5</h4>
+                        </div>
+                        <div class="amount">
+                            <input class="rowInput" type="number" value= "0" id="5" oninput='inp(this)'>
+                        </div>
+                        <div class="total">
+                            <h5 id="count5"></h5>
+                        </div>
+                        <div class="take">
+                            <div id="take5">
+                            </div>
+                        </div>
+                        <div class="leave">
+                            <div id="leave5">
+                            </div>
+                        </div>
+                    </div>
+                    <!--10 Row-->
+                    <div class="myRow odd d-flex flex-row-reverse">
+                        <div class="type">
+                            <h4>10</h4>
+                        </div>
+                        <div class="amount">
+                            <input class="rowInput" type="number" value= "0" id="10" oninput='inp(this)'>
+                        </div>
+                        <div class="total">
+                            <h5 id="count10"></h5>
+                        </div>
+                        <div class="take">
+                            <div id="take10">
+                            </div>
+                        </div>
+                        <div class="leave">
+                            <div id="leave10">
+                            </div>
+                        </div>
+                    </div>
+                    <!--20 Row-->
+                    <div class="myRow even d-flex flex-row-reverse">
+                        <div class="type">
+                            <h4>20</h4>
+                        </div>
+                        <div class="amount">
+                            <input class="rowInput" type="number" value= "0" id="20" oninput='inp(this)'>
+                        </div>
+                        <div class="total">
+                            <h5 id="count20"></h5>
+                        </div>
+                        <div class="take">
+                            <div id="take20">
+                            </div>
+                        </div>
+                        <div class="leave">
+                            <div id="leave20">
+                            </div>
+                        </div>
+                    </div>
+                    <!--50 Row-->
+                    <div class="myRow odd d-flex flex-row-reverse">
+                        <div class="type">
+                            <h4>50</h4>
+                        </div>
+                        <div class="amount">
+                            <input class="rowInput" type="number" value= "0" id="50" oninput='inp(this)'>
+                        </div>
+                        <div class="total">
+                            <h5 id="count50"></h5>
+                        </div>
+                        <div class="take">
+                            <div id="take50">
+                            </div>
+                        </div>
+                        <div class="leave">
+                            <div id="leave50">
+                            </div>
+                        </div>
+                    </div>
+                    <!--100 Row-->
+                    <div class="myRow even d-flex flex-row-reverse">
+                        <div class="type">
+                            <h4>100</h4>
+                        </div>
+                        <div class="amount">
+                            <input class="rowInput" type="number" value= "0" id="100" oninput='inp(this)'>
+                        </div>
+                        <div class="total">
+                            <h5 id="count100"></h5>
+                        </div>
+                        <div class="take">
+                            <div id="take100">
+                            </div>
+                        </div>
+                        <div class="leave">
+                            <div id="leave100">
+                            </div>
+                        </div>
+                    </div>
+                    <!--200 Row-->
+                    <div class="myRow odd d-flex flex-row-reverse">
+                        <div class="type">
+                            <h4>200</h4>
+                        </div>
+                        <div class="amount">
+                            <input class="rowInput" type="number" value= "0" id="200" oninput='inp(this)'>
+                        </div>
+                        <div class="total">
+                            <h5 id="count200"></h5>
+                        </div>
+                        <div class="take">
+                            <div id="take200">
+                            </div>
+                        </div>
+                        <div class="leave">
+                            <div id="leave200">
+                            </div>
+                        </div>
+                    </div>
+                    <!--Total Row-->
+                    <div class="myRow odd d-flex flex-row-reverse">
+                        <div class="type">
+                            <h4>סה"כ</h4>
+                        </div>
+                        <div class="amount">
+                            
+                        </div>
+                        <div class="total">
+                            <h5 id="counted">0₪</h5>
+                        </div>
+                        <div class="take">
+                            <h5 id="take">0₪</h5>
+                        </div>
+                        <div class="leave">
+                            <h5 id="leave">0₪</h5>
+                        </div>
+                    </div>
+                </div><!--/basic container-->
+        </main><!--/main-->
+    </body>
+</html>
